@@ -7,6 +7,7 @@ public class PlayerAngleController : MonoBehaviour {
 	Vector2 lastMousePosition;
 	Vector2 diff = new Vector2(0,0);
 	public GameObject player;
+	public GameObject mainCamera;
 	public float rotationSpeed = 2.1f;
 	private Vector3 prevCameraRot;
 	void Start () {

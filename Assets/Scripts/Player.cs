@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
 	public GameObject bullet;
+    public float shootOffset = 1;
 
     void Start(){
         
@@ -14,9 +15,9 @@ public class Player : MonoBehaviour {
         rb.MovePosition(transform.position + diff);
     }
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.Z) || Input.GetMouseButtonDown(0))
         {
-			Instantiate(bullet , transform.localPosition, transform.rotation);
+			Instantiate(bullet , transform.localPosition + transform.forward * shootOffset, transform.rotation);
         }
 	}
 }

@@ -12,7 +12,7 @@ public class Player : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Z))
         {
-			Instantiate(bullet , transform.localPosition, Quaternion.identity);
+			Instantiate(bullet , transform.localPosition, transform.rotation);
         }
 	}
 }

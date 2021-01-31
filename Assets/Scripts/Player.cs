@@ -6,8 +6,12 @@ public class Player : MonoBehaviour {
 
 	public GameObject bullet;
 
+    void Start(){
+        
+    }
     public void Move(Vector3 diff){
-        transform.Translate(diff);
+        Rigidbody rb = GetComponent<Rigidbody>();
+        rb.MovePosition(transform.position + diff);
     }
 	void Update () {
         if (Input.GetKeyDown(KeyCode.Z))

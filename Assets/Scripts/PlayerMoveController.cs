@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMoveController : MonoBehaviour {
 
 	public GameObject player;
-    public static float moveSpeed = 0.1f;
+    public static float moveSpeed = 0.4f;
     Vector3 up = new Vector3(0f,0f,moveSpeed);
 	Vector3 down= new Vector3(0f,0f,-moveSpeed);
     Vector3 right= new Vector3(moveSpeed,0f,0f);

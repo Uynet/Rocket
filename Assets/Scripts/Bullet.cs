@@ -5,13 +5,13 @@ using UnityEngine;
 public class Bullet : MonoBehaviour {
 
 	// Use this for initialization
+	public float bulletVelocity = 25.0f;
 	void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		float velocity = 13.0f;
-		transform.position += velocity * transform.forward * Time.deltaTime;	
+		transform.position += bulletVelocity * transform.forward * Time.deltaTime;	
 	}
 }
